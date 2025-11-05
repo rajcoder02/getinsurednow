@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Claim Your Social Security</title>
+    <style>
+      :root {
+        --primary-color: #ff0000;
+        --text-color: #ffffff;
+        --background-color: rgba(0, 0, 0, 0.6);
+        --progress-bg: #333333;
+        --checkmark-color: var(--primary-color);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body,
+      html {
+        height: 100%;
+        font-family: "Inter", sans-serif;
+        color: var(--text-color);
+      }
+
+      .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("./hero-bg-2.webp");
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: 10px;
+      }
+
+      .questionnaire {
+        background-color: rgba(0, 5, 36, 0.8);
+        box-shadow: 0 12px 10px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 500px;
+        width: 100%;
+        margin-top: 0px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .questionnaire::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        padding: 2px;
+        background: linear-gradient(270deg, #ff0000, #2c1cc0, #1100ff, #ff0000);
+        background-size: 400% 400%;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: questionnaireBorderMove 16s linear infinite;
+      }
+
+      .questionnaire::after {
+        content: none;
+      }
+
+      .title {
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: normal;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+
+      .title span {
+        color: #00e431;
+        font-weight: bold;
+      }
+
+      .subtitle {
+        font-size: 30px;
+        line-height: 1.2;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 0 16px;
+      }
+
+      .button {
+        width: 100%;
+        background-color: transparent;
+        color: var(--text-color);
+        border: none;
+
+        padding: 24px;
+        font-size: 32px;
+        font-weight: bold;
+        margin-bottom: 16px;
+        cursor: pointer;
+        transition: transform 0.1s;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 1rem;
+        padding: 2px;
+
+        background: linear-gradient(280deg, #ff0000, #ff4141, #1100ff, #ff0000);
+        background-size: 400% 400%;
+        -webkit-mask: linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        animation: borderMove 9s linear infinite;
+      }
+
+      .special-offer .button {
+        background-color: #0c8d00;
+        border-radius: 1rem;
+      }
+
+      .special-offer .button::before {
+        background: unset;
+        border: none;
+        animation: none !important;
+      }
+
+      @keyframes borderMove {
+        0% {
+          background-position: 0% 50%;
+        }
+        100% {
+          background-position: 400% 50%;
+        }
+      }
+
+      .button:hover::before {
+        filter: brightness(1.2);
+      }
+
+      .button:active {
+        transform: scale(0.98);
+      }
+
+      .progress-bar {
+        width: 100%;
+        height: 10px;
+        background-color: var(--progress-bg);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        width: 0;
+        background-color: var(--primary-color);
+        transition: width 0.5s ease;
+      }
+
+      .conditions {
+        display: none;
+      }
+
+      .conditions ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .conditions li {
+        margin-bottom: 10px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        display: flex;
+        align-items: center;
+      }
+
+      .conditions li::before {
+        content: "✓";
+        color: var(--checkmark-color);
+        margin-right: 8px;
+      }
+
+      .conditions li.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .phone-icon {
+        margin-right: 8px;
+        width: 64px;
+        height: 64px;
+      }
+
+      @media (min-width: 768px) {
+        .background {
+          background-image: url("./hero-bg-2.webp");
+          background-size: cover;
+        }
+
+        .container {
+          align-items: center;
+        }
+
+        .questionnaire {
+          margin-top: 0;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .button {
+          padding: 20px;
+          margin-bottom: 0px;
+        }
+
+        .phone-icon {
+          width: 44px;
+          height: 44px;
+        }
+
+        .call-btn {
+          font-size: 24px !important;
+        }
+      }
+
+      .question,
+      .evaluating,
+      .sorry,
+      .special-offer {
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      @keyframes questionnaireBorderMove {
+        0% {
+          background-position: 400% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+    <script>!function(){"use strict";var n="lp_ref",t="cpid",e="lpurl",c="https://webeasyhit.com",r="(?<domain>http(?:s?)://[^/])".concat("/cf/click"),a="(?:(?:/(?<cta>[1-9][0-9])/?)|(?:/))?",i="^".concat(r).concat(a).concat("(?:$|(\\?.))"),o='javascript:window.clickflare.l="(?<original_link>'.concat(r).concat(a,'("|(\\?[^"]"))).*'),s=function(){return new RegExp(i,"")},u=function(){return new RegExp(o,"")};function l(n){var t=function(n){return n.replace(s(),(function(n){for(var t=[],e=1;e<arguments.length;e++)t[e-1]=arguments[e];var r=t[t.length-1].domain;return n.replace(r,c)}))}(n);return'javascript:window.clickflare.l="'.concat(t,'"; void 0;')}function f(n,t){if(t&&n&&t.apply(document,[n]),/loaded|interactive|complete/.test(document.readyState))for(var e=0,c=document.links.length;e<c;e++)if(s().test(document.links[e].href)){var r=document.links[e];window.clickflare.links_replaced.has(r)||(r.href=l(r.href),window.clickflare.links_replaced.add(r))}}var d,h,m,p;!function(r,a){var i=document.onreadystatechange;window.clickflare||(window.clickflare={listeners:{},customParams:{},links_replaced:new Set,addEventListener:function(n,t){var e=this.listeners[n]||[];e.includes(t)||e.push(t),this.listeners[n]=e},dispatchEvent:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))},push:function(n,t){t&&(this.customParams[n]=t),(this.listeners[n]||[]).forEach((function(n){return n(t)}))}},document.onreadystatechange=function(n){return f(n,i)},f(null,i),setTimeout((function(){!function(r,a){var i,o=function(r,a){var i=new URL("".concat(c).concat(r)),o="{",s=o+o;a.startsWith(s)||i.searchParams.set(t,a);return i.searchParams.append(n,document.referrer),i.searchParams.append(e,location.href),i.searchParams.append("lpt",document.title),i.searchParams.append("t",(new Date).getTime().toString()),i.toString()}(r,a),s=document.createElement("script"),l=document.scripts[0];s.async=1,s.src=o,s.onerror=function(){!function(){for(var n=function(n,t){var e=document.links[n];u().test(e.href)&&setTimeout((function(){e&&e.setAttribute("href",function(n){var t=n.match(u());if(t){var e=(t.groups||{}).original_link;return e?e.slice(0,-1):n}return n}(e.href))}))},t=0,e=document.links.length;t<e;t++)n(t)}()},null===(i=l.parentNode)||void 0===i||i.insertBefore(s,l)}(r,a)})))}("".concat("/cf/tags","/").concat(new URL(window.location.href).searchParams.get("cftmid")||"{{_CONTAINER_ID}}"),(m=new URL(window.location.href).searchParams.get(t),d=new RegExp("(^| )".concat("cf_cpid","=([^;]+)")),p=(h=document.cookie.match(d))&&h.pop()||null,m||p||"{{CAMPAIGN_ID_}}"))}();</script>
+  </head>
+  <body>
+    <div class="background"></div>
+    <div class="container">
+      <div class="questionnaire">
+        <div class="question active" id="question1">
+          <h1 class="title">
+            Claim Your <span>Social Security Increase</span> To Help With
+            Groceries And Other Expenses
+          </h1>
+          <p style="text-align: center; margin-bottom: 10px; font-size: 13px">
+            Many Medicare recipients may qualify for a food allowance and other
+            benefits. Would you like to see how much you qualify for?
+          </p>
+          <h2 class="subtitle">Tap Your Age</h2>
+          <div class="button-container">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              style="text-decoration: none"
+            >
+              <button class="button yes-btn" data-age="under64">
+                Under 64
+              </button>
+            </a>
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              style="text-decoration: none"
+            >
+              <button class="button yes-btn" data-age="64-69">64-69</button>
+            </a>
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              style="text-decoration: none"
+            >
+              <button class="button yes-btn" data-age="70-74">70-74</button>
+            </a>
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              style="text-decoration: none"
+            >
+              <button class="button yes-btn" data-age="75+">Over 75</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>

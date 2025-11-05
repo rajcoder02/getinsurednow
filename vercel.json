@@ -1,0 +1,51 @@
+{
+  "rewrites": [
+    {
+      "source": "/medicare",
+      "destination": "/medicare.html"
+    },
+    {
+      "source": "/debt",
+      "destination": "/debt.html"
+    },
+    {
+      "source": "/mitolyn",
+      "destination": "/mitolyn.html"
+    },
+    {
+      "source": "/debtrelief",
+      "destination": "/deftrelief.html"
+    },
+    {
+      "source": "/healthinsurance",
+      "destination": "/healthinsurance.html"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/medicare.html",
+      "destination": "/medicare",
+      "permanent": true
+    },
+    {
+      "source": "/debt.html",
+      "destination": "/debt",
+      "permanent": true
+    },
+    {
+      "source": "/deftrelief.html",
+      "destination": "/debtrelief",
+      "permanent": true
+    },
+    {
+      "source": "/mitolyn.html",
+      "destination": "/mitolyn",
+      "permanent": true
+    },
+    {
+      "source": "/healthinsurance.html",
+      "destination": "/healthinsurance",
+      "permanent": true
+    }
+  ]
+}

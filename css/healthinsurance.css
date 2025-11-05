@@ -1,0 +1,380 @@
+@charset "utf-8";
+/* CSS Document */
+
+.btn.btn-primary.color.phonnu img {
+  width: 17px;
+}
+.ctta {
+  cursor: pointer;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  /* font-size: 1.3rem; */
+}
+
+.bg-light {
+  background: #edf2f6a3 !important;
+  width: 90%;
+  margin: auto;
+  border: 1px solid #edf2f6a3;
+  border-radius: 12px;
+}
+
+.middle-section {
+  background: #edf2f7;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  margin: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.age > .btn-primary {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  width: 40%;
+  margin: 6px;
+  font-size: 20px;
+  font-weight: 600;
+}
+h2 {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+}
+.button-green {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  background: linear-gradient(#49b74e, #388e3c);
+  cursor: pointer;
+  padding: 10px 20px 10px 53px;
+  border-radius: 8px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  line-height: normal;
+  transition: all 0.3s;
+  color: #fff !important;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 30%),
+    inset 0 -0.6px 1px 1px rgb(0 0 0 / 35%);
+
+  width: 80%;
+  text-align: center;
+  font-size: 21px;
+  text-decoration: none !important;
+  margin: auto;
+  display: block;
+}
+
+.mobile-number {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  font-size: 12px;
+}
+
+.transform {
+  object-fit: cover;
+  box-sizing: border-box;
+  border-width: 0;
+}
+
+.main-images {
+  clip-path: polygon(15% 0, 136% 0, 57% 228%, 0% 50%);
+  -webkit-clip-path: polygon(15% 0, 136% 0, 57% 228%, 0% 50%);
+  height: 100%;
+}
+
+.desktop {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+
+.age {
+  max-width: 450px;
+  margin: auto;
+}
+
+.age .btn-light {
+  margin: 1%;
+  padding: 2%;
+  width: 30%;
+  font-weight: 700;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.padding-left {
+  padding-left: 4%;
+}
+
+.padding-all {
+  padding: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.age {
+  max-width: 450px;
+  margin: auto;
+  text-align: center;
+}
+
+.f {
+  text-align: center;
+}
+
+.f a {
+  display: block;
+  max-width: 400px;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+}
+
+.color {
+  animation-name: color_change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  border: none !important;
+}
+
+@-webkit-keyframes color_change {
+  0% {
+    background-color: #da6e16;
+  }
+  25% {
+    background-color: #82da16;
+  }
+  50% {
+    background-color: #16dad0;
+  }
+  75% {
+    background-color: #d41a82;
+  }
+  100% {
+    background-color: #d41a82;
+  }
+}
+
+@-moz-keyframes color_change {
+  0% {
+    background-color: #da6e16;
+  }
+  25% {
+    background-color: #82da16;
+  }
+  50% {
+    background-color: #16dad0;
+  }
+  75% {
+    background-color: #d41a82;
+  }
+  100% {
+    background-color: #d41a82;
+  }
+}
+
+@-ms-keyframes color_change {
+  0% {
+    background-color: #da6e16;
+  }
+  25% {
+    background-color: #82da16;
+  }
+  50% {
+    background-color: #16dad0;
+  }
+  75% {
+    background-color: #d41a82;
+  }
+  100% {
+    background-color: #d41a82;
+  }
+}
+
+@-o-keyframes color_change {
+  0% {
+    background-color: #da6e16;
+  }
+  25% {
+    background-color: #82da16;
+  }
+  50% {
+    background-color: #16dad0;
+  }
+  75% {
+    background-color: #d41a82;
+  }
+  100% {
+    background-color: #d41a82;
+  }
+}
+
+@keyframes color_change {
+  0% {
+    background-color: #da6e16;
+  }
+  25% {
+    background-color: #82da16;
+  }
+  50% {
+    background-color: #16dad0;
+  }
+  75% {
+    background-color: #d41a82;
+  }
+  100% {
+    background-color: #d41a82;
+  }
+}
+
+.redbutton {
+  font-size: 18px;
+  padding: 15px 0;
+  text-transform: uppercase;
+  width: 48%;
+  color: #fff;
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  float: left;
+  border-radius: 3px;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  margin: 0 1%;
+  margin-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+.mOther {
+  background: #0f0f50;
+  width: 100%;
+  color: #fff;
+  font-weight: 900;
+}
+
+.dfd {
+  max-width: 806px;
+  margin: auto;
+  width: 100%;
+}
+
+.text-w {
+  color: #000;
+}
+
+.text-w:hover {
+  color: #000;
+}
+
+.disclaimer_section {
+  font-size: 12px;
+  color: rgb(126, 126, 126);
+}
+
+.hero_heading {
+  max-width: 700px !important;
+}
+
+.hero_btn {
+  transition: all 0.4s ease-in-out;
+}
+
+.hero_btn:hover {
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .code-disclaimer {
+    position: unset !important;
+  }
+  .background-one {
+    background: url("/healthinsurance/healthinsurance.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(41, 92, 162, 0.9);
+  }
+  .m-none {
+    display: none;
+  }
+  .main-images {
+    clip-path: polygon(0% 0, 136% 0, 57% 228%, 0% 50%);
+    -webkit-clip-path: polygon(0% 0, 136% 0, 57% 228%, 0% 50%);
+    height: auto;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    margin: auto;
+  }
+  .padding-left {
+    padding-left: 0%;
+    padding: 2%;
+  }
+  .text-w {
+    color: #fff;
+  }
+  .text-w:hover {
+    color: #fff;
+  }
+}
+@media screen and (max-width: 450px) {
+  .btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 6px;
+    margin: 6px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  h3 {
+    font-size: 100%;
+  }
+  .padding-left {
+    padding-left: 0%;
+    padding: 3%;
+  }
+}
+@media all and (max-width: 768px) {
+  .mobile-number {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .hero_btn {
+    min-width: 600px !important;
+    min-height: 70px;
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .hero_btn {
+    margin-top: 50px !important;
+  }
+}

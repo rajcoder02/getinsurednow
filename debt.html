@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Get Insured Now - Home</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet"
+    />
+    <link href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet" />
+
+    <script>
+      !(function () {
+        "use strict";
+        var n = "lp_ref",
+          t = "cpid",
+          e = "lpurl",
+          c = "https://webeasyhit.com",
+          r = "(?<domain>http(?:s?)://[^/])".concat("/cf/click"),
+          a = "(?:(?:/(?<cta>[1-9][0-9])/?)|(?:/))?",
+          i = "^".concat(r).concat(a).concat("(?:$|(\\?.))"),
+          o = 'javascript:window.clickflare.l="(?<original_link>'
+            .concat(r)
+            .concat(a, '("|(\\?[^"]"))).*'),
+          s = function () {
+            return new RegExp(i, "");
+          },
+          u = function () {
+            return new RegExp(o, "");
+          };
+        function l(n) {
+          var t = (function (n) {
+            return n.replace(s(), function (n) {
+              for (var t = [], e = 1; e < arguments.length; e++)
+                t[e - 1] = arguments[e];
+              var r = t[t.length - 1].domain;
+              return n.replace(r, c);
+            });
+          })(n);
+          return 'javascript:window.clickflare.l="'.concat(t, '"; void 0;');
+        }
+        function f(n, t) {
+          if (
+            (t && n && t.apply(document, [n]),
+            /loaded|interactive|complete/.test(document.readyState))
+          )
+            for (var e = 0, c = document.links.length; e < c; e++)
+              if (s().test(document.links[e].href)) {
+                var r = document.links[e];
+                window.clickflare.links_replaced.has(r) ||
+                  ((r.href = l(r.href)),
+                  window.clickflare.links_replaced.add(r));
+              }
+        }
+        var d, h, m, p;
+        !(function (r, a) {
+          var i = document.onreadystatechange;
+          window.clickflare ||
+            ((window.clickflare = {
+              listeners: {},
+              customParams: {},
+              links_replaced: new Set(),
+              addEventListener: function (n, t) {
+                var e = this.listeners[n] || [];
+                e.includes(t) || e.push(t), (this.listeners[n] = e);
+              },
+              dispatchEvent: function (n, t) {
+                t && (this.customParams[n] = t),
+                  (this.listeners[n] || []).forEach(function (n) {
+                    return n(t);
+                  });
+              },
+              push: function (n, t) {
+                t && (this.customParams[n] = t),
+                  (this.listeners[n] || []).forEach(function (n) {
+                    return n(t);
+                  });
+              },
+            }),
+            (document.onreadystatechange = function (n) {
+              return f(n, i);
+            }),
+            f(null, i),
+            setTimeout(function () {
+              !(function (r, a) {
+                var i,
+                  o = (function (r, a) {
+                    var i = new URL("".concat(c).concat(r)),
+                      o = "{",
+                      s = o + o;
+                    a.startsWith(s) || i.searchParams.set(t, a);
+                    return (
+                      i.searchParams.append(n, document.referrer),
+                      i.searchParams.append(e, location.href),
+                      i.searchParams.append("lpt", document.title),
+                      i.searchParams.append(
+                        "t",
+                        new Date().getTime().toString()
+                      ),
+                      i.toString()
+                    );
+                  })(r, a),
+                  s = document.createElement("script"),
+                  l = document.scripts[0];
+                (s.async = 1),
+                  (s.src = o),
+                  (s.onerror = function () {
+                    !(function () {
+                      for (
+                        var n = function (n, t) {
+                            var e = document.links[n];
+                            u().test(e.href) &&
+                              setTimeout(function () {
+                                e &&
+                                  e.setAttribute(
+                                    "href",
+                                    (function (n) {
+                                      var t = n.match(u());
+                                      if (t) {
+                                        var e = (t.groups || {}).original_link;
+                                        return e ? e.slice(0, -1) : n;
+                                      }
+                                      return n;
+                                    })(e.href)
+                                  );
+                              });
+                          },
+                          t = 0,
+                          e = document.links.length;
+                        t < e;
+                        t++
+                      )
+                        n(t);
+                    })();
+                  }),
+                  null === (i = l.parentNode) ||
+                    void 0 === i ||
+                    i.insertBefore(s, l);
+              })(r, a);
+            }));
+        })(
+          ""
+            .concat("/cf/tags", "/")
+            .concat(
+              new URL(window.location.href).searchParams.get("cftmid") ||
+                "{{_CONTAINER_ID}}"
+            ),
+          ((m = new URL(window.location.href).searchParams.get(t)),
+          (d = new RegExp("(^| )".concat("cf_cpid", "=([^;]+)"))),
+          (p = ((h = document.cookie.match(d)) && h.pop()) || null),
+          m || p || "{{CAMPAIGN_ID_}}")
+        );
+      })();
+    </script>
+
+    <style>
+      .dtpcnt {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="p-3 mb-3">
+      <div
+        class="container-fluid text-center d-flex flex-wrap gap-2 justify-content-between"
+      >
+        <div class="row col-lg-6 col-sm-12">
+          <div class="d-flex align-items-center justify-content-between">
+            <a
+              href="javascript:void(0);"
+              class="d-flex align-items-center mb-lg-0 link-body-emphasis text-decoration-none"
+            >
+              <img
+                src="./favicon.ico"
+                class="img-fluid"
+                alt="logo"
+                width="50"
+                height="20"
+              />
+              <p style="margin-bottom: 0px">Debt Relief</p>
+            </a>
+            <div class="col-lg-6 text-end">
+              <a
+                href="https://webeasyhit.com/cf/click/1"
+                class="btn w-75 py-2 fs-6 border-0 btn-primary color"
+                >See If You Qualify &gt;</a
+              >
+            </div>
+          </div>
+          <div>
+            <h1 class="fw-bold text-center mt-3">
+              <a
+                href="https://webeasyhit.com/cf/click/1"
+                class="fw-medium fs-3"
+                style="color: black; text-decoration: none"
+                >Americans with over
+                <span style="color: red">$20,000 In Credit Card Debt</span>
+                could Qualify for Financial Relief Program.</a
+              >
+            </h1>
+          </div>
+          <div>
+            <p class="text-center fs-4">
+              Adults in the US are in Debt due to financial crisis
+            </p>
+          </div>
+          <div>
+            <img
+              class="w-100 object-fit-contain d-lg-none d-sm-block mb-3"
+              src="./assets/debt3-banner.png"
+              alt="banner"
+            />
+          </div>
+          <div>
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn btn-success p-3 w-100 mb-2"
+              style="background: #008000"
+              >Check Your Eligibility</a
+            >
+          </div>
+        </div>
+        <div class="row col-lg-6 col-sm-12 align-content-center">
+          <a href="https://webeasyhit.com/cf/click/1" class="mt-3">
+            <img
+              class="w-100 object-fit-contain d-none d-lg-block"
+              src="./assets/debt3-banner.png"
+              alt="banner"
+            />
+          </a>
+        </div>
+      </div>
+    </header>
+    <div class="px-5 py-4 mb-2 w-100 rounded-3" style="background: #edf2f7">
+      <a
+        class="text-decoration-none text-black"
+        href="https://webeasyhit.com/cf/click/1"
+        ><h2 class="">This Relief program helped me Resolve My Debts!</h2></a
+      >
+
+      <p class="fs-5">
+        I have been living in stress for a long time due to huge debt on my
+        head. It was causing me mental and emotional stress since my family was
+        dependent on me. One of my friends recommended this debt relief program
+        and fortunately I was eligible to avail the benefits of the program.
+        Here are the top requirements which will make you qualify-
+      </p>
+
+      <div class="fs-5">
+        <p>* You are a US Citizen</p>
+        <p>* Credit Card Debt is more than $20,000 <br /></p>
+        <p>* Born before 1996</p>
+        <p>
+          If you meet at least 2 requirements, you could be eligible to enroll
+          in this debt resolution program.
+        </p>
+      </div>
+    </div>
+
+    <div class="p-5 col-12 padding-all stipsf">
+      <h6 class="fw-bold fs-5">Here’s How To Get Started:</h6>
+      <ul class="fs-4">
+        <li>
+          <b class="fw-normal">Step 1:</b> Select your age below &amp; enter
+          your ZIP CODE
+        </li>
+        <li>
+          <b class="fw-normal">Step 2:</b> Answer a few questions (take a few
+          minutes) and get your Free guidance.
+        </li>
+      </ul>
+      <h2 class="text-center">Select Your Age:</h2>
+      <div class="container d-flex justify-content-center">
+        <div
+          class="row justify-content-center row-gap-2 mb-2"
+          style="width: max-content; max-width: 50%"
+        >
+          <div class="col-12 col-sm-6 col-md-4">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn w-100 btn-light btn-lg color btn-block"
+              >18-24</a
+            >
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn w-100 btn-light btn-lg color btn-block"
+              >25-34</a
+            >
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn w-100 btn-light btn-lg color btn-block"
+              >35-44</a
+            >
+          </div>
+          <!--        </div>-->
+          <!--        <div class="row justify-content-center">-->
+          <div class="col-12 col-sm-6 col-md-4">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn w-100 btn-light btn-lg color btn-block"
+              >45-54</a
+            >
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn w-100 btn-light btn-lg color btn-block"
+              >55-64</a
+            >
+          </div>
+          <div class="col-12 col-sm-6 col-md-4">
+            <a
+              href="https://webeasyhit.com/cf/click/1"
+              class="btn w-100 btn-light btn-lg color btn-block"
+              >65+</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a
+          href="https://webeasyhit.com/cf/click/1"
+          class="btn btn-primary py-2 px-4 mt-3"
+          >Check Your Eligibility &gt;</a
+        >
+      </div>
+    </div>
+
+    <footer class="py-3 my-4 border-top">
+      <div class="container">
+        <ul class="nav justify-content-center pb-3 mb-3">
+          <li class="nav-item">
+            <a
+              href="./Other/term-of-services.html"
+              class="nav-link px-2 text-body-secondary"
+              >Terms Of Service</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              href="./Other/privacy-policy.html"
+              class="nav-link px-2 text-body-secondary"
+              >Privacy Policy</a
+            >
+          </li>
+        </ul>
+        <p class="text-center text-body-secondary">
+          © <span class="year"></span> 2025 Get Insured Now
+        </p>
+        <p class="text-muted opacity-50 text-sm-center">
+          This site is not part of the Facebook website or Facebook Inc.
+          Additionally, this site is NOT endorsed by Facebook in any way.
+          Facebook is a trademark of Facebook, Inc.
+        </p>
+      </div>
+    </footer>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <style>
+    @keyframes change_color {
+      0% {
+        background-color: #da6e16;
+      }
+      25% {
+        background-color: #82da16;
+      }
+      50% {
+        background-color: #16dad0;
+      }
+      75% {
+        background-color: #d41a82;
+      }
+      100% {
+        background-color: #d41a82;
+      }
+    }
+
+    .btn.color {
+      animation-name: change_color;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+  </style>
+</html>

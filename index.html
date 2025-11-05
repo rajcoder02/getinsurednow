@@ -1,0 +1,369 @@
+<html lang="en">
+  <head>
+    <base href="" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get A Lower Rate</title>
+    <link rel="icon" type="image/x-icon" href=" " />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="icon" type="image/png" href="favicon.ico" />
+
+    <script
+      type="text/javascript"
+      src="https://track.getinsurednow.us /track.js"
+    ></script>
+    <script>
+      !(function () {
+        "use strict";
+        var n = "lp_ref",
+          t = "cpid",
+          e = "lpurl",
+          c = "https://webeasyhit.com",
+          r = "(?<domain>http(?:s?)://[^/])".concat("/cf/click"),
+          a = "(?:(?:/(?<cta>[1-9][0-9])/?)|(?:/))?",
+          i = "^".concat(r).concat(a).concat("(?:$|(\\?.))"),
+          o = 'javascript:window.clickflare.l="(?<original_link>'
+            .concat(r)
+            .concat(a, '("|(\\?[^"]"))).*'),
+          s = function () {
+            return new RegExp(i, "");
+          },
+          u = function () {
+            return new RegExp(o, "");
+          };
+        function l(n) {
+          var t = (function (n) {
+            return n.replace(s(), function (n) {
+              for (var t = [], e = 1; e < arguments.length; e++)
+                t[e - 1] = arguments[e];
+              var r = t[t.length - 1].domain;
+              return n.replace(r, c);
+            });
+          })(n);
+          return 'javascript:window.clickflare.l="'.concat(t, '"; void 0;');
+        }
+        function f(n, t) {
+          if (
+            (t && n && t.apply(document, [n]),
+            /loaded|interactive|complete/.test(document.readyState))
+          )
+            for (var e = 0, c = document.links.length; e < c; e++)
+              if (s().test(document.links[e].href)) {
+                var r = document.links[e];
+                window.clickflare.links_replaced.has(r) ||
+                  ((r.href = l(r.href)),
+                  window.clickflare.links_replaced.add(r));
+              }
+        }
+        var d, h, m, p;
+        !(function (r, a) {
+          var i = document.onreadystatechange;
+          window.clickflare ||
+            ((window.clickflare = {
+              listeners: {},
+              customParams: {},
+              links_replaced: new Set(),
+              addEventListener: function (n, t) {
+                var e = this.listeners[n] || [];
+                e.includes(t) || e.push(t), (this.listeners[n] = e);
+              },
+              dispatchEvent: function (n, t) {
+                t && (this.customParams[n] = t),
+                  (this.listeners[n] || []).forEach(function (n) {
+                    return n(t);
+                  });
+              },
+              push: function (n, t) {
+                t && (this.customParams[n] = t),
+                  (this.listeners[n] || []).forEach(function (n) {
+                    return n(t);
+                  });
+              },
+            }),
+            (document.onreadystatechange = function (n) {
+              return f(n, i);
+            }),
+            f(null, i),
+            setTimeout(function () {
+              !(function (r, a) {
+                var i,
+                  o = (function (r, a) {
+                    var i = new URL("".concat(c).concat(r)),
+                      o = "{",
+                      s = o + o;
+                    a.startsWith(s) || i.searchParams.set(t, a);
+                    return (
+                      i.searchParams.append(n, document.referrer),
+                      i.searchParams.append(e, location.href),
+                      i.searchParams.append("lpt", document.title),
+                      i.searchParams.append(
+                        "t",
+                        new Date().getTime().toString()
+                      ),
+                      i.toString()
+                    );
+                  })(r, a),
+                  s = document.createElement("script"),
+                  l = document.scripts[0];
+                (s.async = 1),
+                  (s.src = o),
+                  (s.onerror = function () {
+                    !(function () {
+                      for (
+                        var n = function (n, t) {
+                            var e = document.links[n];
+                            u().test(e.href) &&
+                              setTimeout(function () {
+                                e &&
+                                  e.setAttribute(
+                                    "href",
+                                    (function (n) {
+                                      var t = n.match(u());
+                                      if (t) {
+                                        var e = (t.groups || {}).original_link;
+                                        return e ? e.slice(0, -1) : n;
+                                      }
+                                      return n;
+                                    })(e.href)
+                                  );
+                              });
+                          },
+                          t = 0,
+                          e = document.links.length;
+                        t < e;
+                        t++
+                      )
+                        n(t);
+                    })();
+                  }),
+                  null === (i = l.parentNode) ||
+                    void 0 === i ||
+                    i.insertBefore(s, l);
+              })(r, a);
+            }));
+        })(
+          ""
+            .concat("/cf/tags", "/")
+            .concat(
+              new URL(window.location.href).searchParams.get("cftmid") ||
+                "{{_CONTAINER_ID}}"
+            ),
+          ((m = new URL(window.location.href).searchParams.get(t)),
+          (d = new RegExp("(^| )".concat("cf_cpid", "=([^;]+)"))),
+          (p = ((h = document.cookie.match(d)) && h.pop()) || null),
+          m || p || "{{CAMPAIGN_ID_}}")
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-title">
+          My Insurance Went From
+          <strong>
+            <a href="https://webeasyhit.com/cf/click/1" style="color: black"
+              >$179 to $19</a
+            >
+          </strong>
+          Thanks To This Website!
+        </p>
+
+        <a href="https://webeasyhit.com/cf/click/1">
+          <img
+            src="https://cashwiseclub.com/auto-best/images/hero.jpg"
+            alt="Insurance Savings"
+            class="hero-image"
+          />
+        </a>
+      </div>
+    </section>
+
+    <section class="age-section">
+      <div class="age-content">
+        <p class="save-text">See How Much You Can Save!</p>
+        <h2 class="age-title"><strong>What's Your Age Range?</strong></h2>
+        <div class="age-links">
+          <a href="https://webeasyhit.com/cf/click/1" class="age-link"
+            >18 to 34</a
+          >
+          <a href="https://webeasyhit.com/cf/click/1" class="age-link"
+            >35 to 44</a
+          >
+          <a href="https://webeasyhit.com/cf/click/1" class="age-link"
+            >45 to 54</a
+          >
+          <a href="https://webeasyhit.com/cf/click/1" class="age-link"
+            >55 to 69</a
+          >
+          <a href="https://webeasyhit.com/cf/click/1" class="age-link">70+</a>
+        </div>
+        <div class="footer-text">
+          <p>
+            This site is not a part of the Facebook website or Facebook Inc.
+            This site is not endorsed by Facebook in any way. FACEBOOK is a
+            trademark of FACEBOOK, Inc.
+          </p>
+          <br />
+          <p>
+            This page is an advertorial and is not a consumer protection update.
+            The story told here is for demonstration purposes only and results
+            may vary. Our intention is to provide an online resource that is
+            both informative and helpful. We are not affiliated with any news
+            source. The website and the company that owns it is not responsible
+            for any typographical or photographic errors. All trademarks, logos,
+            and service marks displayed are registered or unregistered
+            trademarks of their respective owners. Clarification of headlines
+            referencing "new rules." A "rule" is defined as a "piece of advice
+            about the best way to do something" by Merriam-Webster's Dictionary.
+            Contents of the site are copyrighted and property of the review or
+            this site. Receiving multiple quotes from comparison sites can give
+            you access to the most competitive rates in your local area.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="bottom-pml">
+      <a class="pp" href="#">Privacy Policy</a> |
+      <a class="tou" href="#">Terms Of Use</a>
+    </div>
+
+    <!-- Popup for Privacy Policy -->
+    <div id="privacyPopup" class="popup-pml">
+      <h2 style="margin-bottom: 1rem; color: #2d3748">Privacy Policy</h2>
+      <div style="max-height: 60vh; overflow-y: auto; padding-right: 1rem">
+        <p>
+          Privacy Policy for get insured now At get insured now, one of our main
+          priorities is the privacy of our visitors. This Privacy Policy
+          document contains types of information that is collected and recorded
+          by get insured now and how we use it. If you have additional questions
+          or require more information about our Privacy Policy, do not hesitate
+          to contact us. This Privacy Policy applies only to our online
+          activities and is valid for visitors to our website with regards to
+          the information that they shared and/or collect in get insured now.
+          This policy is not applicable to any information collected offline or
+          via channels other than this website.
+
+          <strong>Consent</strong><br /><br />
+          By using our website, you hereby consent to our Privacy Policy and
+          agree to its terms.
+
+          <strong>Information we collect</strong><br /><br />
+          The personal information that you are asked to provide, and the
+          reasons why you are asked to provide it, will be made clear to you at
+          the point we ask you to provide your personal information. If you
+          contact us directly, we may receive additional information about you
+          such as your name, email address, phone number, the contents of the
+          message and/or attachments you may send us, and any other information
+          you may choose to provide. When you register for an Account, we may
+          ask for your contact information, including items such as name,
+          company name, address, email address, and telephone number.
+
+          <strong>How we use your information</strong><br /><br />
+          We use the information we collect in various ways, including to: •
+          Provide, operate, and maintain our website • Improve, personalize, and
+          expand our website • Understand and analyze how you use our website •
+          Develop new products, services, features, and functionality •
+          Communicate with you for customer service and marketing purposes •
+          Send you emails • Find and prevent fraud Privacy Policy: We hate spam
+          and promise to keep your email address safe
+        </p>
+      </div>
+      <button class="close-btn-pml" onclick="closePopup('privacyPopup')">
+        Close
+      </button>
+    </div>
+
+    <!-- Popup for Terms of Use -->
+    <div id="termsPopup" class="popup-pml">
+      <h2 style="margin-bottom: 1rem; color: #2d3748">Terms and Conditions</h2>
+      <div style="max-height: 60vh; overflow-y: auto; padding-right: 1rem">
+        <p>
+          <strong>Welcome to getinsurednow.us !</strong><br /><br />
+
+          These terms and conditions outline the rules and regulations for the
+          use of getinsurednow's Website, located at getinsurednow.us .<br /><br />
+
+          By accessing this website we assume you accept these terms and
+          conditions. Do not continue to use getinsurednow.us if you do not
+          agree to take all of the terms and conditions stated on this page.<br /><br />
+
+          <strong>Cookies</strong><br /><br />
+          We employ the use of cookies. By accessing getinsurednow.us , you
+          agreed to use cookies in agreement with the getinsurednow's Privacy
+          Policy.<br /><br />
+
+          Most interactive websites use cookies to let us retrieve the user's
+          details for each visit. Cookies are used by our website to enable the
+          functionality of certain areas to make it easier for people visiting
+          our website.<br /><br />
+
+          <strong>License</strong><br /><br />
+          Unless otherwise stated, getinsurednow and/or its licensors own the
+          intellectual property rights for all material on getinsurednow.us .
+          All intellectual property rights are reserved.<br /><br />
+
+          <strong>Disclaimer</strong><br /><br />
+          To the maximum extent permitted by applicable law, we exclude all
+          representations, warranties and conditions relating to our website and
+          the use of this website.<br /><br />
+
+          As long as the website and the information and services on the website
+          are provided free of charge, we will not be liable for any loss or
+          damage of any nature.
+        </p>
+      </div>
+      <button class="close-btn-pml" onclick="closePopup('termsPopup')">
+        Close
+      </button>
+    </div>
+
+    <script>
+      // Function to open the popup
+      function openPopup(popupId) {
+        document.getElementById(popupId).style.display = "block";
+      }
+
+      // Function to close the popup
+      function closePopup(popupId) {
+        document.getElementById(popupId).style.display = "none";
+      }
+
+      // Attach click event listeners to the Privacy Policy and Terms of Use links
+      document.querySelector(".pp").addEventListener("click", function (event) {
+        event.preventDefault();
+        openPopup("privacyPopup");
+      });
+
+      document
+        .querySelector(".tou")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          openPopup("termsPopup");
+        });
+
+      // Close popup when clicking outside
+      window.addEventListener("click", function (event) {
+        const privacyPopup = document.getElementById("privacyPopup");
+        const termsPopup = document.getElementById("termsPopup");
+
+        if (event.target === privacyPopup) {
+          closePopup("privacyPopup");
+        }
+        if (event.target === termsPopup) {
+          closePopup("termsPopup");
+        }
+      });
+
+      // Replace all other links to redirect to comparecarusa.com
+      document.querySelectorAll("a").forEach((link) => {
+        if (!link.classList.contains("pp") && !link.classList.contains("tou")) {
+          link.href = "https://webeasyhit.com/cf/click/1";
+          link.target = "_blank"; // Optional: open in new tab
+        }
+      });
+    </script>
+  </body>
+</html>
